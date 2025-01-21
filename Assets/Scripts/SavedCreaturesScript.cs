@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class InteractablesScript : MonoBehaviour
+public class SavedCreaturesScript : MonoBehaviour
 {
-    public List<string> hintItems = new List<string>();
+    public List<string> savedCreatures = new List<string>();
 
     public GameObject NetBrokenEffect;
 
 
     public void OnItemGrabbed(string prefabName)
     {
-        Debug.Log("Picked up: " + prefabName);
+        Debug.Log("Saved: " + prefabName);
 
-        hintItems.Add(prefabName);
+        savedCreatures.Add(prefabName);
 
         GameObject currentObject = GameObject.Find(prefabName);
 
@@ -22,7 +22,7 @@ public class InteractablesScript : MonoBehaviour
 
         Transform currentTransform = currentObject.transform;
 
-        StartCoroutine(Wait(currentObject));
+        //StartCoroutine(Wait(currentObject));
 
         Instantiate(NetBrokenEffect, currentTransform.position, currentTransform.rotation);
 
@@ -35,21 +35,21 @@ public class InteractablesScript : MonoBehaviour
             Debug.LogError("No audio source found for: " + prefabName);
         }
 
-        if (hintItems.Contains("FlyingMachine") && hintItems.Contains("MurderBook"))
+        if (savedCreatures.Contains("") && savedCreatures.Contains(""))
         {
-            Complete();
+            SavedCreaturesComplete();
         }
     }
 
 
-    public IEnumerator Wait(GameObject)
-    {
-        yield return new WaitForSeconds(7f);
-    }
+    //public IEnumerator Wait(GameObject)
+    //{
+    //    yield return new WaitForSeconds(7f);
+    //}
 
-    public void HintListComplete()
+    public void SavedCreaturesComplete()
     {
-        Debug.Log("You found all the clues!");
+        Debug.Log("You have saved all my friends!");
     }
 }
 

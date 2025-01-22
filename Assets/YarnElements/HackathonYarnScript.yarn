@@ -1,5 +1,28 @@
-﻿title: HackathonYarnScript
+﻿
+title:Pirate
 tags:
 ---
+Ahoy matey! Care to join me crew!
+
+-> Yes!
+
+<<play_pirate_littering_animation YarnCommands>>
+What are you doing over there! Darn, me crew are always messing around.
+Good thing it does harm. 
+
+<<starfish_appear>>
+Stop! 
+
+===
+
+title: PirateGame
+tags:
+---
+
+Me crew and I know nothing about cleaning up after ourselves...
+Say, wouldn't mind given us a helping hand would you matey?
+
+->Sure!
+<<start_pirate_game YarnCommands>>
 
 ===

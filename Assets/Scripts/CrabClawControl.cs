@@ -8,7 +8,10 @@ public class CrabClawControl : MonoBehaviour
 
     public Animator crabClawAnimator;
 
-
+    public void Start()
+    {
+        Debug.Log("Claw script on");
+    }
     // Update is called once per frame
     public void Update()
     {

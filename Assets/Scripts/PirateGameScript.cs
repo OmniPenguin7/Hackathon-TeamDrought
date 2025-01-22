@@ -44,15 +44,17 @@ public class PirateGameScript : MonoBehaviour
     }
 
 
-    public void OnTriggerEnter(Collider other)
-    {
-        GameObject currentObject = GameObject.Find(prefabName);
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    //CurrentObject currentObject;
 
-        if (other.tag == "Rubbish")
-        {
-            StartCoroutine(DestroyWait(currentObject));
-        }
-    }
+    //    //currentObject = GameObject.FindGameObjectWithTag("Rubbish").GetComponent<CurrentObject>();
+
+    //    if (other.tag == "Rubbish")
+    //    {
+    //        StartCoroutine(DestroyWait(currentObject));
+    //    }
+    //}
 
     public IEnumerator DestroyWait (GameObject itemToDestroy)
     {

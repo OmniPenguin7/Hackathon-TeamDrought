@@ -35,14 +35,14 @@ public class YarnCommands : MonoBehaviour
 
     public void PirateGame()
     {
-        player.transform.SetPositionAndRotation(pirateGameTeleport.transform.position, Quaternion.identity);
+        //player.transform.SetPositionAndRotation(pirateGameTeleport.transform.position, Quaternion.identity);
     }
 
     [YarnCommand("start_crab_game")]
 
     public void CrabGame()
     {
-        player.transform.SetPositionAndRotation(crabGameTeleport.transform.position, Quaternion.identity);
+        //player.transform.SetPositionAndRotation(crabGameTeleport.transform.position, Quaternion.identity);
     }
 
     [YarnCommand ("end_game")]
@@ -65,7 +65,7 @@ public class YarnCommands : MonoBehaviour
 
     public void StarfishAppear()
     {
-        starfish.SetActive (true);
+        //starfish.SetActive (true);
     }
 
 }

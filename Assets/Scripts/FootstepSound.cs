@@ -24,11 +24,11 @@ public class FootstepSound : MonoBehaviour
     {
         if (Vector3.Distance(lastFootstepPosition, transform.position) > footstepGabDistance)
         {
-            audioSource.pitch = Random.Range(0.8f, 1.2f);
-            int randomClip = Random.Range(0, audioClips.Length);
-            audioSource.clip = audioClips[randomClip];
-            audioSource.Play();
-            lastFootstepPosition = transform.position;
+            //audioSource.pitch = Random.Range(0.8f, 1.2f);
+            //int randomClip = Random.Range(0, audioClips.Length);
+            //audioSource.clip = audioClips[randomClip];
+            //audioSource.Play();
+            //lastFootstepPosition = transform.position;
         }
     }
 }

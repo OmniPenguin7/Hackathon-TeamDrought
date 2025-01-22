@@ -1,28 +1,41 @@
 ﻿
-title:Pirate
+title:PirateIntro
 tags:
 ---
-Ahoy matey! Care to join me crew!
+Ahoy me crustation friend! Care to join me crew!
 
 -> Yes!
 
 <<play_pirate_littering_animation YarnCommands>>
 What are you doing over there! Darn, me crew are always messing around.
-Good thing it does harm. 
+Good thing the ocean can survive a few bits of litter, ain't that right!
 
-<<starfish_appear>>
-Stop! 
+<<starfish_dialogue YarnCommands>>
 
 ===
 
-title: PirateGame
+title: Pirate
 tags:
 ---
 
 Me crew and I know nothing about cleaning up after ourselves...
-Say, wouldn't mind given us a helping hand would you matey?
+Say, wouldn't mind given us a helping hand would you?
 
 ->Sure!
-<<start_pirate_game YarnCommands>>
+
+I knew yer were a fine soul! 
+Feel free to wander the ship and help me crew!
+
+===
+
+title:CrabGame
+tags:
+---
+
+Would you like to start "Crab Clean Up"?
+
+->Yes
+<<start_crab_game YarnCommands>>
+->No
 
 ===

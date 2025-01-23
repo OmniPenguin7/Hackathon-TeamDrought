@@ -2,15 +2,16 @@
 title:PirateIntro
 tags:
 ---
-Ahoy me crustation friend! Care to join me crew!
+Ahoy me crustation friend! Care to join me crew! #line:PirateLine1
 
 -> Yes!
+    <<play_pirate_littering_animation YarnCommands>>
+What are you doing over there! Darn, me crew are always messing around. #line:PirateLine2
+Good thing the ocean can survive a few bits of litter, ain't that right! #line:PirateLine3
+    <<starfish_dialogue YarnCommands>>
+-> What can I do?
+    <<jump Pirate>>
 
-<<play_pirate_littering_animation YarnCommands>>
-What are you doing over there! Darn, me crew are always messing around.
-Good thing the ocean can survive a few bits of litter, ain't that right!
-
-<<starfish_dialogue YarnCommands>>
 
 ===
 
@@ -18,13 +19,13 @@ title: Pirate
 tags:
 ---
 
-Me crew and I know nothing about cleaning up after ourselves...
-Say, wouldn't mind given us a helping hand would you?
+Me crew and I know nothing about cleaning up after ourselves... #line:PirateLine4
+Say, wouldn't mind given us a helping hand would you? #line:PirateLine5
 
 ->Sure!
 
-I knew yer were a fine soul! 
-Feel free to wander the ship and help me crew!
+I knew yer were a fine soul! #line:PirateLine6
+Feel free to wander the ship and help me crew! #line:PirateLine7
 
 ===
 
@@ -38,4 +39,15 @@ Would you like to start "Crab Clean Up"?
 <<start_crab_game YarnCommands>>
 ->No
 
+===
+
+title:PirateGame
+tags:
+---
+
+Would you like to start "Messy Pirates"?
+
+->Yes
+<<start_pirate_game YarnCommands>>
+->No
 ===

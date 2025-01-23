@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class CrabClawControl : MonoBehaviour
 {
+    public string leftRightRef;
+
     public InputActionReference crabTriggerReference;
 
     public Animator crabClawAnimator;
+
+    public bool clawClosed;
 
 
     // Update is called once per frame
@@ -17,10 +21,12 @@ public class CrabClawControl : MonoBehaviour
         {
             Debug.Log("Button press detected");
             crabClawAnimator.SetInteger("TriggerPressed", 1);
+            clawClosed = true;
         }
         else 
         {
             crabClawAnimator.SetInteger("TriggerPressed", 0);
+            clawClosed = false;
         }
     }
 }

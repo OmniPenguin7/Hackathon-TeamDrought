@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using Yarn.Unity;
 using static UnityEngine.GraphicsBuffer;
 
@@ -27,9 +28,10 @@ public class NPC3D : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        dialogueCanvas = GameObject.FindGameObjectWithTag("Dialogue Canvas");
+        dialogueCanvas = GameObject.FindGameObjectWithTag("Canvas");
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         playerGameObject = GameObject.FindGameObjectWithTag("Player");
+
 
 
         if (scriptToLoad == null)
@@ -86,6 +88,13 @@ public class NPC3D : MonoBehaviour
         //if other is player
         if (other.gameObject.CompareTag("Player"))
         {
+            GameObject[] interactorObjects = GameObject.FindGameObjectsWithTag("Interactors");
+
+            for (int i = 0; i < interactorObjects.Length; i++)
+            {
+                interactorObjects[i].GetComponent<NearFarInteractor>().enableFarCasting = true;
+            }
+
             if (!string.IsNullOrEmpty(talkToNode))
             {
                 if (dialogueCanvas != null)
@@ -111,6 +120,15 @@ public class NPC3D : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canvasActive = false;
+
+            GameObject[] interactorObjects = GameObject.FindGameObjectsWithTag("Interactors");
+
+            for (int i = 0; i < interactorObjects.Length; i++)
+            {
+                interactorObjects[i].GetComponent<NearFarInteractor>().enableFarCasting = false;
+            }
+
+
         }
     }
 }

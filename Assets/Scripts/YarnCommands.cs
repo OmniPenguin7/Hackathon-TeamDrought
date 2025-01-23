@@ -14,11 +14,13 @@ public class YarnCommands : MonoBehaviour
     public GameObject crabGameTeleport;
     public AudioSource crabGameIntro;
     public AudioSource crabGameMusic;
+    public AudioSource crabGameOutro;
 
     [Header("PirateGame")]
     public GameObject pirateGameTeleport;
     public AudioSource pirateGameIntro;
     public AudioSource pirateGameMusic;
+    public AudioSource pirateGameOutro;
 
     [Header("PirateLittering")]
     public AudioSource pirateLittering;

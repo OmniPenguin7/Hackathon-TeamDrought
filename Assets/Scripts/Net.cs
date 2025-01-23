@@ -9,21 +9,37 @@ public class Net : MonoBehaviour
 {
     public CrabClawControl leftClaw, RightClaw;
 
-    public List<string> netsBroken = new List<string>();
+    public List<Net> nets;
 
     public GameObject NetBrokenEffect;
     public GameObject player;
     public GameObject target;
     
-    Transform currentTransform = currentObject.transform;
+    //Transform currentTransform = currentObject.transform;
 
+    public void Start()
+    {
+        nets = new List<Net>();
+    }
+
+    public void Update()
+    {
+        if (nets.Count == 5)
+        {
+            CrabGameComplete();
+        }
+        else
+        {
+            Debug.Log("List not complete");
+        }
+    }
 
     public void OnTriggerStay(Collider other)
     {
-        netsBroken.Add(netName);
-        GameObject currentObject = GameObject.Find(netName);
-        Transform currentTransform = currentObject.transform;
-        AudioSource currentAudioSource = currentObject.GetComponent<AudioSource>();
+        //netsBroken.Add(netName);
+        //GameObject currentObject = GameObject.Find(netName);
+        //Transform currentTransform = currentObject.transform;
+        //AudioSource currentAudioSource = currentObject.GetComponent<AudioSource>();
         if (other.tag == "CrabClaw")
         {
             Debug.Log("Claw detected");
@@ -32,35 +48,22 @@ public class Net : MonoBehaviour
             {
                 Debug.Log("Destroying net");
                 this.gameObject.SetActive(false);
-                Instantiate(NetBrokenEffect, currentTransform.position, currentTransform.rotation);
+                //Instantiate(NetBrokenEffect, currentTransform.position, currentTransform.rotation);
+                Net newNets = new Net();
+                nets.Add(newNets);            
             }
+
         }
+
+        
     }
 
-    //    public void OnNetBroken(string netName)
-    //    {
+  
 
-    //        if (currentAudioSource != null)
-    //        {
-    //            currentAudioSource.Play();
-    //        }
-    //        else
-    //        {
-    //            Debug.LogError("No audio source found for: " + netName);
-    //        }
-
-    //        if (netName.Contains("SharkNet") && netName.Contains("KrillNet") && netName.Contains("TurtleNet") && netName.Contains("FishNet"))
-    //        {
-    //            CrabGameComplete();
-    //        }
-
-
-    //    }
-
-    //    public void CrabGameComplete()
-    //    {
-    //        Debug.Log("Crab Game Complete");
-    //        player.transform.SetPositionAndRotation(target.transform.position, Quaternion.identity);
-    //    }
-    //}
+    public void CrabGameComplete()
+    {
+        Debug.Log("Crab Game Complete");
+        player.transform.SetPositionAndRotation(target.transform.position, Quaternion.identity);
+    }
 }
+

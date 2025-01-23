@@ -1,18 +1,27 @@
-﻿
+﻿title:VariableSetUp
+---
+<<declare $talkedToPirate = false as bool>> 
+
+
+===
+
 title:PirateIntro
 tags:
 ---
+<<if $talkedToPirate is false>>
 Ahoy me crustation friend! Care to join me crew! #line:PirateLine1
-
--> Yes!
-    <<play_pirate_littering_animation YarnCommands>>
-What are you doing over there! Darn, me crew are always messing around. #line:PirateLine2
-Good thing the ocean can survive a few bits of litter, ain't that right! #line:PirateLine3
+    -> Yes!
+        <<play_pirate_littering_animation YarnCommands>>
+        What are you doing over there! Darn, me crew are always messing around. #line:PirateLine2
+        Good thing the ocean can survive a few bits of litter, ain't that right! #line:PirateLine3
+        <<set $talkedToPirate = true>>
     <<starfish_dialogue YarnCommands>>
--> What can I do?
+        -> What can I do?
+            <<set $talkedToPirate = true>>
+            <<jump Pirate>>
+<<else>>
     <<jump Pirate>>
-
-
+<<endif>>
 ===
 
 title: Pirate
@@ -36,7 +45,7 @@ tags:
 Would you like to start "Crab Clean Up"?
 
 ->Yes
-<<start_crab_game YarnCommands>>
+    <<start_crab_game YarnCommands>>
 ->No
 
 ===
@@ -48,6 +57,6 @@ tags:
 Would you like to start "Messy Pirates"?
 
 ->Yes
-<<start_pirate_game YarnCommands>>
+    <<start_pirate_game YarnCommands>>
 ->No
 ===

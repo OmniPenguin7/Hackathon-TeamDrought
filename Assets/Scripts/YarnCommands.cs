@@ -10,45 +10,28 @@ public class YarnCommands : MonoBehaviour
     public InMemoryVariableStorage yarnInMemoryStorage;
     public GameObject player;
 
-    [Header ("CrabGame")]
+    [Header("CrabGame")]
     public GameObject crabGameTeleport;
     public AudioSource crabGameIntro;
     public AudioSource crabGameMusic;
 
-    [Header ("PirateGame")]
+    [Header("PirateGame")]
     public GameObject pirateGameTeleport;
     public AudioSource pirateGameIntro;
     public AudioSource pirateGameMusic;
 
-    [Header ("PirateLittering")]
+    [Header("PirateLittering")]
     public AudioSource pirateLittering;
     public Animation pirateLitteringAnimation;
 
-    [Header ("EndGame")]
+    [Header("EndGame")]
     public AudioSource endGameSound;
     public AudioSource endGameMusic;
 
 
-    [Header ("Starfish")]
+    [Header("Starfish")]
     public GameObject starfish;
     public AudioSource starfishIntro;
-
-    //[YarnCommand("start_pirate_game")]
-
-    //public void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.tag == "PirateGameActivate")
-    //    {
-    //        Debug.Log("Pirate Game Activated");
-    //        PirateGame();
-    //    }
-
-    //    if (other.tag == "CrabGameActivate")
-    //    {
-    //        Debug.Log("Crab Game Activated");
-    //        CrabGame();
-    //    }
-    //}
 
 
     [YarnCommand("start_pirate_game")]
@@ -66,27 +49,28 @@ public class YarnCommands : MonoBehaviour
         player.transform.SetPositionAndRotation(crabGameTeleport.transform.position, Quaternion.identity);
     }
 
-    [YarnCommand ("end_game")]
+    [YarnCommand("end_game")]
 
     public void EndGame()
     {
-        //Play AudioClip from starfish
+        endGameSound.Play();
+        endGameMusic.Play();
     }
 
-    [YarnCommand ("play_pirate_littering_animation")]
+    [YarnCommand("play_pirate_littering_animation")]
 
     public void PirateLittering()
     {
         //Play Animation for litter
         //Play Animation for pirate shaking head
-        //Play Audio from pirate littering
+        pirateLittering.Play();
     }
 
-    [YarnCommand ("starfish_dialogue")]
+    [YarnCommand("starfish_dialogue")]
 
     public void StarfishDialogue()
     {
-        //Play Starfish Audio
+        starfishIntro.Play();
     }
 
 

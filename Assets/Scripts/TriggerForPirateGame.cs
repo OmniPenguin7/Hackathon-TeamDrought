@@ -9,6 +9,7 @@ public class TriggerForPirateGame : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("PirateGame active");
         if (other.tag == "PirateGameActivate")
         {
             yarnCommands.PirateGame();

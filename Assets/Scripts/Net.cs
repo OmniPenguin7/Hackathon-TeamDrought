@@ -8,20 +8,20 @@ public class Net : MonoBehaviour
 {
     public CrabClawControl leftClaw, RightClaw;
 
-    private GameObject netToDestroy;
 
-    private void Start()
-    {
-        netToDestroy = GetComponent<GameObject>();
-    }
 
-    public void OnTriggerEnter(Collider other)
+
+
+    public void OnTriggerStay(Collider other)
     {
-        if(other.tag == "CrabClaw")
+        if (other.tag == "CrabClaw")
         {
-            if(leftClaw.clawClosed || RightClaw.clawClosed)
+            Debug.Log("Claw detected");
+
+            if (leftClaw.clawClosed || RightClaw.clawClosed)
             {
-                Destroy(netToDestroy);
+                Debug.Log("Destroying net");
+                this.gameObject.SetActive(false);
             }
         }
     }

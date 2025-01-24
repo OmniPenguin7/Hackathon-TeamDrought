@@ -13,6 +13,8 @@ There is a bug that occurs with the main pirate due to the near/far ray being sw
 </ul>
 
 Website : https://loissherwood5.wixsite.com/crablife
+(Access for trailer - File is too large for GitHub)
+
 
 <h2> <i> Getting Started </i> </h2>
 

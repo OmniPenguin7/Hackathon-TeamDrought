@@ -3,7 +3,8 @@
 <h1> <b> <i>Crab Life</i> </b> </h1>
 
 
-<b> <i> NOTE </i> There is a bug that occurs with the main pirate due to the near/far ray being switched on and off. If this occurs, the rest of the project is still playable and please report this to the developers. </b>
+<b> <i> NOTE </i> 
+There is a bug that occurs with the main pirate due to the near/far ray being switched on and off. If this occurs, the rest of the project is still playable and please report this to the developers. </b>
 <h2> <i>Project Details </i> </h2>
 <ul>
 <li>Unity Version: 2022.3.48f1</li>

@@ -2483,7 +2483,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &153623641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2676,7 +2676,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -27525,7 +27525,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &392482370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27718,7 +27718,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -39402,7 +39402,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &841467994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39595,7 +39595,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -41872,7 +41872,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 275885006}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 989763354}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &989763346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94504,7 +94504,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &1592242743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94697,7 +94697,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -101544,7 +101544,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!65 &1937496458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101737,7 +101737,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -106498,7 +106498,7 @@ MonoBehaviour:
   binEffectTransform: {fileID: 0}
   rubbish: []
   targetTag: Player
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7062833851400422114}
 --- !u!82 &7062833851400422114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -106509,7 +106509,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 26a39e8fb5f288a43bedcde1565dbd07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
